@@ -1,6 +1,6 @@
 <template>
     <div v-if="isLoading" class="fixed inset-0 z-50 flex items-center justify-center bg-white">
-        <LazyLoadedDotLottieVue style="height: 100px; width: 100px" autoplay loop src="https://lottie.host/6f399c54-77fb-430c-b463-d1fd970a3e3f/IGlDFjD4uF.lottie" />
+        <DotLottieVue style="height: 100px; width: 100px" autoplay loop src="https://lottie.host/6f399c54-77fb-430c-b463-d1fd970a3e3f/IGlDFjD4uF.lottie" />
     </div>
     <div v-if="!isLoading" class="bg-white body">
         <!-- Navigation -->
@@ -124,7 +124,7 @@
                 </div>
             </div>
             <div class="flex items-center justify-center mt-12">
-                <LazyLoadedImageGallery :items="galleryItems" />
+                <ImageGallery :items="galleryItems" />
             </div>
         </section>
         <!-- Contact Section -->
@@ -150,12 +150,9 @@
 
 <script setup>
 import RainbowButton from '@/components/RainbowButton.vue'
-import { ref, onBeforeMount, defineAsyncComponent  } from 'vue'
-import ImageGallery from '~/components/ImageGallery.vue';
-import { DotLottieVue } from '@lottiefiles/dotlottie-vue';
-
-const LazyLoadedImageGallery = defineAsyncComponent(() => import('~/components/ImageGallery.vue'));
-const LazyLoadedDotLottieVue = defineAsyncComponent(() => import('@lottiefiles/dotlottie-vue'));
+import { onMounted, onBeforeUnmount, ref, onBeforeMount } from 'vue'
+import ImageGallery from '~/components/ImageGallery.vue'
+import { DotLottieVue } from '@lottiefiles/dotlottie-vue'
 
 
 const isLoading = ref(true)
