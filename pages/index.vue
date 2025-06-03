@@ -1,35 +1,9 @@
 <template>
     <div class="bg-white body">
         <!-- Navigation -->
-        <nav id="navbar"
-            class="fixed top-0 left-0 w-full z-50 px-8 py-4 flex justify-between items-center transition-all duration-300">
-            <div class="text-2xl font-bold text-white">Veseliashko</div>
-            <ul class="flex space-x-6 font-medium text-white">
-                <li><a href="#services" class="hover:underline">
-                        <RainbowButton>
-                            <p class="text-neutral-950">
-                                Services
-                            </p>
-                        </RainbowButton>
-                    </a></li>
-                <li><a href="#about" class="hover:underline">
-                        <RainbowButton>
-                            <p class="text-neutral-950">
-                                About us
-                            </p>
-                        </RainbowButton>
-                    </a></li>
-                <li><a href="#contact" class="hover:underline">
-                        <RainbowButton>
-                            <p class="text-neutral-950">
-                                Contact us
-                            </p>
-                        </RainbowButton>
-                    </a></li>
-            </ul>
-        </nav>
+        <Navigation/>
         <!-- Call to Action Section -->
-        <section class="relative h-screen bg-cover bg-center">
+        <section class="relative h-screen bg-cover bg-center hero">
             <div class="absolute inset-0 bg-black opacity-50"></div>
             <div class="relative flex flex-col items-center justify-center h-full text-white text-center p-4">
                 <!-- <h1 class="text-6xl font-bold mb-4 z-2">Make Your Child's Party Unforgettable!</h1> -->
@@ -62,7 +36,7 @@
                 <li>🎂 Custom Cakes</li>
                 <li>🎤 DJ Services</li>
             </ul>
-            <div class="flex justify-around">
+            <div class="flex flex-col sm:flex-row justify-around cards-wrapper">
                 <SparklesText :colors="{ first: '#9E7AFF', second: '#FE8BBB' }" :sparkles-count="5"
                     class="my-8 product-card">
                     <div class="bg-yellow-300 p-6 rounded-lg shadow-lg text-center card-content">
@@ -196,28 +170,37 @@ onMounted(() => {
 
 const galleryItems = [
     {
-        src: "/images/example-1.jpg",
+        src: "/images/viber_image_2025-05-31_10-02-04-276.jpg",
     },
     {
-        src: "/images/example-2.jpg",
+        src: "/images/viber_image_2025-05-31_10-02-04-636.jpg",
     },
     {
-        src: "/images/example-3.jpg",
+        src: "/images/viber_image_2025-05-31_10-02-04-636.jpg",
     },
     {
-        src: "/images/example-4.jpg",
+        src: "/images/viber_image_2025-05-31_10-02-05-268.jpg",
     },
     {
-        src: "/images/example-5.jpg",
+        src: "/images/viber_image_2025-05-31_10-02-05-577.jpg",
     },
     {
-        src: "/images/example-6.jpg",
+        src: "/images/viber_image_2025-05-31_10-02-05-938.jpg",
     },
     {
-        src: "/images/example-1.jpg",
+        src: "/images/viber_image_2025-05-31_10-02-06-284.jpg",
     },
     {
-        src: "/images/example-4.jpg",
+        src: "/images/viber_image_2025-05-31_10-02-06-617.jpg",
+    },
+    {
+        src: "/images/viber_image_2025-05-31_10-02-06-990.jpg",
+    },
+    {
+        src: "/images/viber_image_2025-05-31_10-02-07-305.jpg",
+    },
+    {
+        src: "/images/viber_image_2025-05-31_10-02-07-614.jpg",
     },
 ];
 
@@ -306,6 +289,59 @@ ul {
     h2 {
         font-size: 20px;
         font-weight: bold;
+    }
+}
+
+.cards-wrapper {
+    @media (max-width: 576px) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @media (max-width: 576px) {
+        .product-card {
+            max-width: 300px;
+            width: 100%;
+            span {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.about-us-content {
+    @media (max-width: 576px) {
+        flex-direction: column;
+        .text-content {
+            width: 100%;
+        }
+        img {
+            width: 100%;
+        };
+    }
+}
+
+#contact {
+    @media (max-width: 576px) {
+        .content-container {
+            flex-direction: column;
+            .contact-container {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 12px;
+            }
+        }
+    }
+}
+
+.hero {
+    @media (max-width: 576px) {
+        span {
+            font-size: 42px;
+        }
     }
 }
 
