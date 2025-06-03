@@ -1,6 +1,6 @@
 <template>
     <div v-if="isLoading" class="fixed inset-0 z-50 flex items-center justify-center bg-white">
-        <DotLottieVue style="height: 100px; width: 100px" autoplay loop src="https://lottie.host/6f399c54-77fb-430c-b463-d1fd970a3e3f/IGlDFjD4uF.lottie" />
+        <LazyLoadedDotLottieVue style="height: 100px; width: 100px" autoplay loop src="https://lottie.host/6f399c54-77fb-430c-b463-d1fd970a3e3f/IGlDFjD4uF.lottie" />
     </div>
     <div v-if="!isLoading" class="bg-white body">
         <!-- Navigation -->
@@ -124,7 +124,7 @@
                 </div>
             </div>
             <div class="flex items-center justify-center mt-12">
-                <ImageGallery :items="galleryItems" />
+                <LazyLoadedImageGallery :items="galleryItems" />
             </div>
         </section>
         <!-- Contact Section -->
@@ -154,8 +154,8 @@ import { ref, onBeforeMount, defineAsyncComponent  } from 'vue'
 import ImageGallery from '~/components/ImageGallery.vue';
 import { DotLottieVue } from '@lottiefiles/dotlottie-vue';
 
-const ImageGallery = defineAsyncComponent(() => import('~/components/ImageGallery.vue'));
-const DotLottieVue = defineAsyncComponent(() => import('@lottiefiles/dotlottie-vue'));
+const LazyLoadedImageGallery = defineAsyncComponent(() => import('~/components/ImageGallery.vue'));
+const LazyLoadedDotLottieVue = defineAsyncComponent(() => import('@lottiefiles/dotlottie-vue'));
 
 
 const isLoading = ref(true)
