@@ -8,6 +8,7 @@ export default defineNuxtConfig({
       title: "Children's Party Agency",
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { name: 'description', content: 'Това е описанието на моя Nuxt сайт.' },
         { charset: 'utf-8' }
       ],
       link: [
@@ -16,7 +17,7 @@ export default defineNuxtConfig({
       ],
       script: [
         { src: 'https://cdn.tailwindcss.com', defer: true }
-      ]
+      ],
     }
   },
 
