@@ -18,6 +18,9 @@ export default defineNuxtConfig({
       script: [
         { src: 'https://cdn.tailwindcss.com', defer: true }
       ],
+      htmlAttrs: {
+        lang: 'en'
+      }
     }
   },
 

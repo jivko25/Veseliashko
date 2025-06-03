@@ -1,7 +1,10 @@
 <template>
-    <div class="bg-white body">
+    <div v-if="isLoading" class="fixed inset-0 z-50 flex items-center justify-center bg-white">
+        <DotLottieVue style="height: 100px; width: 100px" autoplay loop src="https://lottie.host/6f399c54-77fb-430c-b463-d1fd970a3e3f/IGlDFjD4uF.lottie" />
+    </div>
+    <div v-if="!isLoading" class="bg-white body">
         <!-- Navigation -->
-        <Navigation/>
+        <Navigation />
         <!-- Call to Action Section -->
         <section class="relative h-screen bg-cover bg-center hero">
             <div class="absolute inset-0 bg-black opacity-50"></div>
@@ -114,9 +117,9 @@
                         Lorem Ipsum.
                     </p>
                     <div class="flex flex-row gap-2 mx-auto">
-                        <a href="#" class="text-blue-500"><i class="fab fa-facebook-f icon"></i></a>
-                        <a href="#" class="text-blue-400"><i class="fab fa-twitter icon"></i></a>
-                        <a href="#" class="text-pink-600"><i class="fab fa-instagram icon"></i></a>
+                        <a href="#" class="text-blue-500" aria-label="Learn more from our facebook"><i class="fab fa-facebook-f icon"></i></a>
+                        <a href="#" class="text-blue-400" aria-label="Learn more from our twitter"><i class="fab fa-twitter icon"></i></a>
+                        <a href="#" class="text-pink-600" aria-label="Learn more from our instagram"><i class="fab fa-instagram icon"></i></a>
                     </div>
                 </div>
             </div>
@@ -147,25 +150,29 @@
 
 <script setup>
 import RainbowButton from '@/components/RainbowButton.vue'
-import { onMounted, onBeforeUnmount } from 'vue'
+import { onMounted, onBeforeUnmount, ref, onBeforeMount } from 'vue'
 import ImageGallery from '~/components/ImageGallery.vue'
+import { DotLottieVue } from '@lottiefiles/dotlottie-vue'
 
-onMounted(() => {
-    const navbar = document.getElementById('navbar')
 
-    const onScroll = () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('bg-pink-200', 'bg-opacity-60', 'backdrop-blur-md')
-        } else {
-            navbar.classList.remove('bg-pink-200', 'bg-opacity-60', 'backdrop-blur-md')
-        }
-    }
+const isLoading = ref(true)
 
-    window.addEventListener('scroll', onScroll)
-
-    onBeforeUnmount(() => {
-        window.removeEventListener('scroll', onScroll)
+onBeforeMount(() => {
+  if (document.readyState === 'complete') {
+    // Страницата вече е напълно заредена
+    console.log('load (immediate)')
+    setTimeout(() => {
+      isLoading.value = false
+    }, 300)
+  } else {
+    // Изчакай load събитието
+    window.addEventListener('load', () => {
+      console.log('load (event)')
+      setTimeout(() => {
+        isLoading.value = false
+      }, 300)
     })
+  }
 })
 
 const galleryItems = [
@@ -213,6 +220,20 @@ html {
 
 body {
     font-family: 'Baloo 2', cursive;
+}
+
+.loader {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #9E7AFF; // Можеш да смениш цвета
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 .video-bg {
@@ -303,6 +324,7 @@ ul {
         .product-card {
             max-width: 300px;
             width: 100%;
+
             span {
                 width: 100%;
             }
@@ -313,12 +335,16 @@ ul {
 .about-us-content {
     @media (max-width: 576px) {
         flex-direction: column;
+
         .text-content {
             width: 100%;
         }
+
         img {
             width: 100%;
-        };
+        }
+
+        ;
     }
 }
 
@@ -326,6 +352,7 @@ ul {
     @media (max-width: 576px) {
         .content-container {
             flex-direction: column;
+
             .contact-container {
                 display: flex;
                 flex-direction: row;

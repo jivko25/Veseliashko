@@ -1,6 +1,8 @@
 <template>
-    <nav id="navbar"
-        class="fixed top-0 left-0 w-full z-50 px-8 py-4 flex justify-between items-center transition-all duration-300">
+    <nav id="navbar" :class="[
+        'fixed top-0 left-0 w-full z-50 px-8 py-4 flex justify-between items-center transition-all duration-300',
+        (isScrolled || isOpen) ? 'bg-pink-200/60' : ''
+    ]">
         <div class="text-2xl font-bold text-white">Veseliashko</div>
 
         <!-- Hamburger Button (visible on mobile only) -->
@@ -52,11 +54,26 @@
         </transition>
     </nav>
 </template>
+
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 
 const isOpen = ref(false)
+const isScrolled = ref(false)
+
+const handleScroll = () => {
+    isScrolled.value = window.scrollY > 10
+}
+
+onMounted(() => {
+    window.addEventListener('scroll', handleScroll)
+})
+
+onUnmounted(() => {
+    window.removeEventListener('scroll', handleScroll)
+})
 </script>
+
 <style scoped>
 .fade-enter-active,
 .fade-leave-active {
