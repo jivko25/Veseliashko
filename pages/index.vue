@@ -150,7 +150,7 @@
 
 <script setup>
 import RainbowButton from '@/components/RainbowButton.vue'
-import { onMounted, onBeforeUnmount, ref, onBeforeMount, defineAsyncComponent  } from 'vue'
+import { ref, onBeforeMount, defineAsyncComponent  } from 'vue'
 import ImageGallery from '~/components/ImageGallery.vue';
 import { DotLottieVue } from '@lottiefiles/dotlottie-vue';
 
