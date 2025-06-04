@@ -46,7 +46,9 @@
                         <p class="subtitle">1h</p>
                         <RainbowButton>
                             <p class="text-neutral-950 text-xl">
-                                Contact us
+                                <a href="#contact">
+                                    Contact us
+                                </a>
                             </p>
                         </RainbowButton>
                     </div>
@@ -58,7 +60,9 @@
                         <p class="subtitle">2h</p>
                         <RainbowButton>
                             <p class="text-neutral-950 text-xl">
-                                Contact us
+                                <a href="#contact">
+                                    Contact us
+                                </a>
                             </p>
                         </RainbowButton>
                     </div>
@@ -70,7 +74,9 @@
                         <p class="subtitle">3h</p>
                         <RainbowButton>
                             <p class="text-neutral-950 text-xl">
-                                Contact us
+                                <a href="#contact">
+                                    Contact us
+                                </a>
                             </p>
                         </RainbowButton>
                     </div>
