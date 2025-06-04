@@ -1,8 +1,8 @@
 <template>
-    <div v-if="isLoading" class="fixed inset-0 z-50 flex items-center justify-center bg-white">
+    <!-- <div v-if="isLoading" class="fixed inset-0 z-50 flex items-center justify-center bg-white">
         <DotLottieVue style="height: 100px; width: 100px" autoplay loop src="https://lottie.host/6f399c54-77fb-430c-b463-d1fd970a3e3f/IGlDFjD4uF.lottie" />
-    </div>
-    <div v-if="!isLoading" class="bg-white body">
+    </div> -->
+    <div class="bg-white body">
         <!-- Navigation -->
         <Navigation />
         <!-- Call to Action Section -->
@@ -23,9 +23,9 @@
                         </p>
                     </RainbowButton>
                 </a>
-                <video autoplay muted loop class="video-bg">
+                <!-- <video autoplay muted loop class="video-bg">
                     <source src="/videos/6299128-uhd_3840_2160_25fps.mp4" type="video/mp4" class="video-bg">
-                </video>
+                </video> -->
             </div>
         </section>
         <!-- Services Overview Section -->
