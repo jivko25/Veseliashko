@@ -2,13 +2,12 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
-  ssr: true,
-  target: 'static',
   vite: {
     build: {
       sourcemap: true,  // Включва source maps в продукция
     }
   },
+
   app: {
     head: {
       title: "Children's Party Agency",
