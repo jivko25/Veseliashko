@@ -83,7 +83,6 @@
                 </SparklesText>
             </div>
         </section>
-        
         <!-- About Us Section -->
         <section id="about" class="py-20 px-4 bg-white">
             <LetterPullup words="About Us" :delay="0.1" class="text-black mb-12 section-header" />
