@@ -9,7 +9,6 @@
         <section class="relative h-screen bg-cover bg-center hero">
             <div class="absolute inset-0 bg-black opacity-50"></div>
             <div class="relative flex flex-col items-center justify-center h-full text-white text-center p-4">
-                <!-- <h1 class="text-6xl font-bold mb-4 z-2">Make Your Child's Party Unforgettable!</h1> -->
                 <SparklesText text="Make Your Child's Party Unforgettable!"
                     :colors="{ first: '#9E7AFF', second: '#FE8BBB' }" :sparkles-count="10" class="my-8" />
                 <p class="mb-4 text-lg z-2">We offer a variety of fun and exciting party packages tailored for your
