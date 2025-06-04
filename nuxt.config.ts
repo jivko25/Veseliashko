@@ -9,7 +9,6 @@ export default defineNuxtConfig({
       sourcemap: true,  // Включва source maps в продукция
     }
   },
-
   app: {
     head: {
       title: "Children's Party Agency",
