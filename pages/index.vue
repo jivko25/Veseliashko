@@ -20,9 +20,9 @@
                         </p>
                     </RainbowButton>
                 </a>
-                <video autoplay muted loop class="video-bg" width="1920" height="1080">
+                <!-- <video autoplay muted loop class="video-bg" width="1920" height="1080">
                     <source src="/videos/6299128-uhd_3840_2160_25fps.mp4" type="video/mp4" class="video-bg">
-                </video>
+                </video> -->
             </div>
         </section>
         <!-- Services Overview Section -->
