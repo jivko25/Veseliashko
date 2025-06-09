@@ -13,7 +13,7 @@
         </button>
 
         <!-- Menu (desktop) -->
-        <ul class="hidden sm:flex space-x-6 font-medium text-white">
+        <ul class="hidden sm:flex space-x-6 font-medium text-white min-h-[48px] min-w-[200px]">
             <li><a href="#services">
                     <RainbowButton>
                         <p class="text-neutral-950">Услуги</p>

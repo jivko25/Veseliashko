@@ -21,7 +21,7 @@
                     </RainbowButton>
                 </a>
                 <video autoplay muted loop class="video-bg">
-                    <source src="/videos/6299128-uhd_3840_2160_25fps.mp4" type="video/mp4" class="video-bg">
+                    <source src="/videos/6299128-uhd_3840_2160_25fps.webm" type="video/mp4" class="video-bg">
                 </video>
             </div>
         </section>
@@ -65,7 +65,9 @@
         <section id="about" class="py-20 px-4 bg-white">
             <LetterPullup words="За нас" :delay="0.1" class="text-black mb-12 section-header" />
             <div class="about-us-content">
-                <img src="/images/about-us.jpg" alt="">
+                <div class="img-wrapper">
+                    <img src="/images/about-us.jpg" alt="About Us" class="responsive-img">
+                </div>
                 <div class="text-content">
                     <SparklesText :colors="{ first: '#9E7AFF', second: '#FE8BBB' }" :sparkles-count="20"
                         class="w-100 flex flex-row justify-center">
@@ -337,7 +339,7 @@ ul {
     gap: 30px;
 
     img {
-        width: 40%;
+        max-width: 560px;
         object-fit: cover;
     }
 
@@ -396,7 +398,7 @@ ul {
 }
 
 .about-us-content {
-    @media (max-width: 576px) {
+    @media (max-width: 1024px) {
         flex-direction: column;
 
         .text-content {
@@ -433,6 +435,28 @@ ul {
             font-size: 42px;
         }
     }
+}
+
+.video-bg {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    /* или колкото е реалното съотношение */
+    object-fit: cover;
+    display: block;
+}
+
+.img-wrapper {
+  width: 100%;
+  max-width: 560px;
+  aspect-ratio: 140 / 169;
+    overflow: hidden;
+}
+
+.responsive-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 // .icon {
