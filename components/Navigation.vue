@@ -37,17 +37,17 @@
                 class="absolute top-full left-0 w-full flex flex-col items-center py-4 space-y-4 sm:hidden text-white font-medium mobile-menu-wrapper">
                 <li><a href="#services" @click="isOpen = false">
                         <RainbowButton>
-                            <p class="text-neutral-950">Services</p>
+                            <p class="text-neutral-950">Услуги</p>
                         </RainbowButton>
                     </a></li>
                 <li><a href="#about" @click="isOpen = false">
                         <RainbowButton>
-                            <p class="text-neutral-950">About us</p>
+                            <p class="text-neutral-950">За нас</p>
                         </RainbowButton>
                     </a></li>
                 <li><a href="#contact" @click="isOpen = false">
                         <RainbowButton>
-                            <p class="text-neutral-950">Contact us</p>
+                            <p class="text-neutral-950">Свържете се с нас</p>
                         </RainbowButton>
                     </a></li>
             </ul>

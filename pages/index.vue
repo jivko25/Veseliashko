@@ -9,16 +9,16 @@
         <section class="relative h-screen bg-cover bg-center hero">
             <div class="absolute inset-0 bg-black opacity-50"></div>
             <div v-if="!isLoading" class="relative flex flex-col items-center justify-center h-full text-white text-center p-4">
-                <!-- <SparklesText text="Незабравимо парти за всяко дете!" :colors="{ first: '#9E7AFF', second: '#FE8BBB' }"
-                    :sparkles-count="10" class="my-8" /> -->
+                <SparklesText text="Незабравимо парти за всяко дете!" :colors="{ first: '#9E7AFF', second: '#FE8BBB' }"
+                    :sparkles-count="10" class="my-8" />
                 <p class="mb-4 text-lg z-2">Организираме празненства, пълни с музика, балони, игри и усмивки – всичко,
                     което прави рождения ден специален!</p>
                 <a href="#contact">
-                    <!-- <RainbowButton>
+                    <RainbowButton>
                         <p class="text-neutral-950">
                             Свържи се с нас
                         </p>
-                    </RainbowButton> -->
+                    </RainbowButton>
                 </a>
                 <!-- <video autoplay muted loop class="video-bg" width="1920" height="1080">
                     <source src="/videos/6299128-uhd_3840_2160_25fps.mp4" type="video/mp4" class="video-bg">
