@@ -301,6 +301,13 @@ body {
     }
 }
 
+.video-bg {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    z-index: 1;
+    object-fit: cover;
+}
 
 .z-2 {
     z-index: 2;
@@ -432,13 +439,11 @@ ul {
 }
 
 .video-bg {
-    position: absolute; /* За да не заема място в DOM */
-    top: 0;
-    left: 0;
-    width: 100%;   /* Ще покрие 100% от ширината на родителя */
-    height: 100%;  /* Ще покрие 100% от височината на родителя */
-    object-fit: cover; /* За да покрие изцяло контейнера, без да се разтяга */
-    z-index: 1;    /* Уверете се, че е под текстовото съдържание */
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    /* или колкото е реалното съотношение */
+    object-fit: cover;
+    display: block;
 }
 
 .img-wrapper {
