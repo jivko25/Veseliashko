@@ -88,4 +88,8 @@ onUnmounted(() => {
 .mobile-menu-wrapper {
     background-color: rgb(251 207 232 / 0.6) !important;
 }
+
+ul {
+  min-height: 40px; /* или колкото е височината на navbar-а */
+}
 </style>
