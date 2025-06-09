@@ -313,6 +313,7 @@ body {
 .product-card {
     max-width: 33vw;
     height: 100%;
+    width: fit-content;
 
     .card-content {
         height: 100%;
