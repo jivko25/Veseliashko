@@ -28,6 +28,9 @@ export default defineNuxtConfig({
       }
     }
   },
+  image: {
+    dir: 'public',
+  },
 
   modules: ['@nuxt/icon', '@nuxt/image', '@nuxt/scripts']
 })

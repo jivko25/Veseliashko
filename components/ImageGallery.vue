@@ -1,17 +1,30 @@
 <template>
     <div class="gallery" :class="cn('mb-[var(--size)] grid grid-cols-6 gap-1', props.containerClass)">
-        <img v-for="(image, index) in props.items" :key="index" :src="image.src" :alt="`image-${index}`"
-            class="gallery-img" :class="cn(
-                'size-[calc(var(--size)*2)] rounded object-cover transition-[clip-path,filter] duration-75',
-                props.class,
-            )" @click="showLightbox(index)" />
+      <NuxtImg
+        v-for="(image, index) in props.items"
+        :key="index"
+        :src="image.src"
+        :alt="`image-${index}`"
+        width="300"
+        height="300"
+        format="webp"
+        sizes="(max-width: 768px) 100vw, 33vw"
+        class="gallery-img"
+        :class="cn(
+          'size-[calc(var(--size)*2)] rounded object-cover transition-[clip-path,filter] duration-75',
+          props.class,
+        )"
+        @click="showLightbox(index)"
+      />
     </div>
-
-    <vue-easy-lightbox :visible="lightboxVisible" :imgs="props.items.map(i => i.src)" :index="lightboxIndex"
-        @hide="lightboxVisible = false" />
-</template>
-
-
+  
+    <vue-easy-lightbox
+      :visible="lightboxVisible"
+      :imgs="props.items.map(i => i.src)"
+      :index="lightboxIndex"
+      @hide="lightboxVisible = false"
+    />
+  </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
