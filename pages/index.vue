@@ -158,8 +158,6 @@
 import { ref, onBeforeMount } from 'vue'
 const RainbowButton = defineAsyncComponent(() => import('@/components/RainbowButton.vue'))
 const ImageGallery = defineAsyncComponent(() => import('~/components/ImageGallery.vue'))
-import { DotLottieVue } from '@lottiefiles/dotlottie-vue'
-
 
 const isLoading = ref(true)
 
