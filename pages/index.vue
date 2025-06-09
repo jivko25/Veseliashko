@@ -4,11 +4,11 @@
     </div> -->
     <div class="bg-white body">
         <!-- Navigation -->
-        <Navigation />
+        <Navigation v-if="!isLoading" />
         <!-- Call to Action Section -->
         <section class="relative h-screen bg-cover bg-center hero">
             <div class="absolute inset-0 bg-black opacity-50"></div>
-            <div class="relative flex flex-col items-center justify-center h-full text-white text-center p-4">
+            <div v-if="!isLoading" class="relative flex flex-col items-center justify-center h-full text-white text-center p-4">
                 <SparklesText text="Незабравимо парти за всяко дете!" :colors="{ first: '#9E7AFF', second: '#FE8BBB' }"
                     :sparkles-count="10" class="my-8" />
                 <p class="mb-4 text-lg z-2">Организираме празненства, пълни с музика, балони, игри и усмивки – всичко,
