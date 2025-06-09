@@ -23,6 +23,7 @@
                 <!-- <video autoplay muted loop class="video-bg" width="1920" height="1080">
                     <source src="/videos/6299128-uhd_3840_2160_25fps.mp4" type="video/mp4" class="video-bg">
                 </video> -->
+                <img src="/images/viber_image_2025-05-31_10-02-05-268.jpg" alt="About Us" class="video-bg">
             </div>
         </section>
         <!-- Services Overview Section -->
