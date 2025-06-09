@@ -10,7 +10,7 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: "Children's Party Agency",
+      title: "Веселяшко",
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'description', content: 'Това е описанието на моя Nuxt сайт.' },
