@@ -54,7 +54,7 @@
 
                         <RainbowButton class="mt-6">
                             <p class="text-neutral-950 text-xl">
-                                <a href="#contact">Contact us</a>
+                                <a href="#contact">Свържете се с нас</a>
                             </p>
                         </RainbowButton>
                     </div>
