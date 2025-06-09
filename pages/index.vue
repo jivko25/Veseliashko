@@ -21,7 +21,7 @@
                     </RainbowButton>
                 </a>
                 <video autoplay muted loop class="video-bg">
-                    <source src="/videos/6299128-uhd_3840_2160_25fps.webm" type="video/mp4" class="video-bg">
+                    <source src="/videos/6299128-uhd_3840_2160_25fps.mp4" type="video/mp4" class="video-bg">
                 </video>
             </div>
         </section>
