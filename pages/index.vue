@@ -4,7 +4,7 @@
     </div> -->
     <div class="bg-white body">
         <!-- Navigation -->
-        <!-- <Navigation /> -->
+        <Navigation />
         <!-- Call to Action Section -->
         <section class="relative h-screen bg-cover bg-center hero">
             <div class="absolute inset-0 bg-black opacity-50"></div>
