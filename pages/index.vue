@@ -20,7 +20,7 @@
                         </p>
                     </RainbowButton>
                 </a>
-                <video autoplay muted loop class="video-bg">
+                <video autoplay muted loop class="video-bg" width="1920" height="1080">
                     <source src="/videos/6299128-uhd_3840_2160_25fps.mp4" type="video/mp4" class="video-bg">
                 </video>
             </div>
@@ -279,6 +279,7 @@ html {
 
 body {
     font-family: 'Baloo 2', cursive;
+    font-display: swap;
 }
 
 .loader {
@@ -300,13 +301,6 @@ body {
     }
 }
 
-.video-bg {
-    height: 100vh;
-    width: 100vw;
-    position: absolute;
-    z-index: 1;
-    object-fit: cover;
-}
 
 .z-2 {
     z-index: 2;
@@ -438,11 +432,13 @@ ul {
 }
 
 .video-bg {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    /* или колкото е реалното съотношение */
-    object-fit: cover;
-    display: block;
+    position: absolute; /* За да не заема място в DOM */
+    top: 0;
+    left: 0;
+    width: 100%;   /* Ще покрие 100% от ширината на родителя */
+    height: 100%;  /* Ще покрие 100% от височината на родителя */
+    object-fit: cover; /* За да покрие изцяло контейнера, без да се разтяга */
+    z-index: 1;    /* Уверете се, че е под текстовото съдържание */
 }
 
 .img-wrapper {
