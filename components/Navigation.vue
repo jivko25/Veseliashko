@@ -3,7 +3,7 @@
         'fixed top-0 left-0 w-full z-50 px-8 py-4 flex justify-between items-center transition-all duration-300',
         (isScrolled || isOpen) ? 'bg-pink-200/60' : ''
     ]">
-        <div class="text-2xl font-bold text-white">Veseliashko</div>
+        <div class="text-2xl font-bold text-white">🎈 Веселяшко</div>
 
         <!-- Hamburger Button (visible on mobile only) -->
         <button @click="isOpen = !isOpen" class="sm:hidden flex flex-col justify-center items-center space-y-1">
@@ -16,17 +16,17 @@
         <ul class="hidden sm:flex space-x-6 font-medium text-white">
             <li><a href="#services">
                     <RainbowButton>
-                        <p class="text-neutral-950">Services</p>
+                        <p class="text-neutral-950">Услуги</p>
                     </RainbowButton>
                 </a></li>
             <li><a href="#about">
                     <RainbowButton>
-                        <p class="text-neutral-950">About us</p>
+                        <p class="text-neutral-950">За нас</p>
                     </RainbowButton>
                 </a></li>
             <li><a href="#contact">
                     <RainbowButton>
-                        <p class="text-neutral-950">Contact us</p>
+                        <p class="text-neutral-950">Свържете се с нас</p>
                     </RainbowButton>
                 </a></li>
         </ul>

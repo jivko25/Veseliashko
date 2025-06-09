@@ -9,16 +9,14 @@
         <section class="relative h-screen bg-cover bg-center hero">
             <div class="absolute inset-0 bg-black opacity-50"></div>
             <div class="relative flex flex-col items-center justify-center h-full text-white text-center p-4">
-                <SparklesText text="Make Your Child's Party Unforgettable!"
-                    :colors="{ first: '#9E7AFF', second: '#FE8BBB' }" :sparkles-count="10" class="my-8" />
-                <p class="mb-4 text-lg z-2">We offer a variety of fun and exciting party packages tailored for your
-                    child's
-                    special
-                    day.</p>
+                <SparklesText text="Незабравимо парти за всяко дете!" :colors="{ first: '#9E7AFF', second: '#FE8BBB' }"
+                    :sparkles-count="10" class="my-8" />
+                <p class="mb-4 text-lg z-2">Организираме празненства, пълни с музика, балони, игри и усмивки – всичко,
+                    което прави рождения ден специален!</p>
                 <a href="#contact">
                     <RainbowButton>
                         <p class="text-neutral-950">
-                            Contact us
+                            Свържи се с нас
                         </p>
                     </RainbowButton>
                 </a>
@@ -29,128 +27,128 @@
         </section>
         <!-- Services Overview Section -->
         <section id="services" class="py-20 px-4 bg-gradient-to-b from-yellow-200 to-pink-200">
-            <LetterPullup words="Our Services" :delay="0.1" class="text-black section-header" />
-            <p class="text-center mb-8 text-lg">We provide a range of services to make your child's party magical:</p>
-            <ul class="list-disc list-inside text-center mb-8 text-lg">
-                <li>🎈 Party Planning</li>
-                <li>🎨 Themed Decorations</li>
-                <li>🎉 Entertainment & Games</li>
-                <li>🎂 Custom Cakes</li>
-                <li>🎤 DJ Services</li>
-            </ul>
+            <LetterPullup words="Нашите услуги" :delay="0.1" class="text-black section-header" />
+            <p class="text-center mb-8 text-lg"> Изберете идеалния парти пакет за незабравим рожден ден, пълен с
+                усмивки, игри и много забавление!
+            </p>
             <div class="flex flex-col sm:flex-row justify-around cards-wrapper">
-                <SparklesText :colors="{ first: '#9E7AFF', second: '#FE8BBB' }" :sparkles-count="5"
-                    class="my-8 product-card">
-                    <div class="bg-yellow-300 p-6 rounded-lg shadow-lg text-center card-content">
-                        <h3 class="text-3xl font-bold mb-2 subtitle">Basic Package</h3>
-                        <p class="subtitle">1h</p>
-                        <RainbowButton>
+                <SparklesText v-for="(pack, index) in packages" :key="index"
+                    :colors="{ first: '#9E7AFF', second: '#FE8BBB' }" :sparkles-count="pack.sparkles"
+                    class="my-8 product-card w-full sm:w-[30%]">
+                    <div :class="`${pack.bgColor} p-6 rounded-lg shadow-lg text-center card-content`">
+                        <h3 class="text-3xl font-bold mb-2 subtitle">{{ pack.title }}</h3>
+                        <p class="subtitle"><strong>{{ pack.price }}</strong></p>
+
+                        <div class="text-left text-base space-y-2 mt-4 card-inner-content">
+                            <p class="font-semibold">Включва:</p>
+                            <ul class="list-disc list-inside space-y-1">
+                                <li v-for="(item, i) in pack.includes" :key="i">{{ item }}</li>
+                            </ul>
+
+                            <p class="font-semibold mt-2">Допълнително:</p>
+                            <ul class="list-disc list-inside space-y-1">
+                                <li v-for="(item, i) in pack.extra" :key="i">{{ item }}</li>
+                            </ul>
+                        </div>
+
+                        <RainbowButton class="mt-6">
                             <p class="text-neutral-950 text-xl">
-                                <a href="#contact">
-                                    Contact us
-                                </a>
-                            </p>
-                        </RainbowButton>
-                    </div>
-                </SparklesText>
-                <SparklesText :colors="{ first: '#9E7AFF', second: '#FE8BBB' }" :sparkles-count="20"
-                    class="my-8 product-card">
-                    <div class="bg-pink-300 p-6 rounded-lg shadow-lg text-center card-content">
-                        <h3 class="text-3xl font-bold mb-2 subtitle">Standard Package</h3>
-                        <p class="subtitle">2h</p>
-                        <RainbowButton>
-                            <p class="text-neutral-950 text-xl">
-                                <a href="#contact">
-                                    Contact us
-                                </a>
-                            </p>
-                        </RainbowButton>
-                    </div>
-                </SparklesText>
-                <SparklesText :colors="{ first: '#9E7AFF', second: '#FE8BBB' }" :sparkles-count="50"
-                    class="my-8 product-card">
-                    <div class="bg-blue-300 p-6 rounded-lg shadow-lg text-center card-content">
-                        <h3 class="text-3xl font-bold mb-2 subtitle">Premium Package</h3>
-                        <p class="subtitle">3h</p>
-                        <RainbowButton>
-                            <p class="text-neutral-950 text-xl">
-                                <a href="#contact">
-                                    Contact us
-                                </a>
+                                <a href="#contact">Contact us</a>
                             </p>
                         </RainbowButton>
                     </div>
                 </SparklesText>
             </div>
         </section>
-        
+
         <!-- About Us Section -->
         <section id="about" class="py-20 px-4 bg-white">
-            <LetterPullup words="About Us" :delay="0.1" class="text-black mb-12 section-header" />
+            <LetterPullup words="За нас" :delay="0.1" class="text-black mb-12 section-header" />
             <div class="about-us-content">
                 <img src="/images/about-us.jpg" alt="">
                 <div class="text-content">
                     <SparklesText :colors="{ first: '#9E7AFF', second: '#FE8BBB' }" :sparkles-count="20"
                         class="w-100 flex flex-row justify-center">
-                        <h4 class="text-center w-100 subtitle">Мирела Ганчева</h4>
+                        <h4 class="text-center w-100 subtitle">Добре дошли в Парти агенция „Веселячко“! 🎉</h4>
                     </SparklesText>
-                    <h5 class="additional-title w-100 text-center">Собственик на компанията</h5>
+                    <h5 class="additional-title w-100 text-center">Тук всяко дете е звездата на своето вълшебно парти!
+                        🎈</h5>
+
                     <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                        but also the leap into electronic typesetting, remaining essentially unchanged. It was
-                        popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                        and more recently with desktop publishing software like Aldus PageMaker including versions of
-                        Lorem Ipsum.
+                        Здравейте! Казвам се [Твоето име] и вече над 10 години работя с деца – с обич, търпение и много
+                        усмивки.
+                        Вярвам, че човек трябва да прави това, в което е най-добър – а за мен това е да създавам радост,
+                        да развеселявам
+                        и да превръщам обикновените дни в незабравими празници.
                     </p>
+
                     <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                        but also the leap into electronic typesetting, remaining essentially unchanged. It was
-                        popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                        and more recently with desktop publishing software like Aldus PageMaker including versions of
-                        Lorem Ipsum.
+                        Създадох „Веселячко“ с една цел – да ви помогна да избягате от сивото ежедневие и да превърнете
+                        рождения ден
+                        или специалния повод на вашето дете в истинско приключение, пълно с музика, игри, смях и магия.
                     </p>
+
                     <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                        but also the leap into electronic typesetting, remaining essentially unchanged. It was
-                        popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                        and more recently with desktop publishing software like Aldus PageMaker including versions of
-                        Lorem Ipsum.
+                        Работата ми с децата ме е научила да съхраня детското в себе си – защото когато гледаш света с
+                        очите на дете,
+                        той е по-цветен, по-истински и много по-весел.
                     </p>
-                    <div class="flex flex-row gap-2 mx-auto">
-                        <a href="#" class="text-blue-500" aria-label="Learn more from our facebook"><i class="fab fa-facebook-f icon"></i></a>
-                        <a href="#" class="text-blue-400" aria-label="Learn more from our twitter"><i class="fab fa-twitter icon"></i></a>
-                        <a href="#" class="text-pink-600" aria-label="Learn more from our instagram"><i class="fab fa-instagram icon"></i></a>
+
+                    <p class="mt-4 font-semibold">👑 Очакват ви:</p>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li>Детски дискотеки</li>
+                        <li>Забавни игри и предизвикателства</li>
+                        <li>Рисунки на лице</li>
+                        <li>Фигурални балони</li>
+                        <li>Много смях, танци и незабравими емоции</li>
+                    </ul>
+
+                    <p class="mt-4 font-semibold text-pink-600">💛 Доверете ни се – заедно ще създадем празник, който
+                        децата ще помнят дълго.</p>
+
+                    <div class="flex flex-row gap-2 mx-auto mt-6">
+                        <a href="#" class="text-blue-500" aria-label="Learn more from our facebook"><i
+                                class="fab fa-facebook-f icon"></i></a>
+                        <a href="#" class="text-blue-400" aria-label="Learn more from our twitter"><i
+                                class="fab fa-twitter icon"></i></a>
+                        <a href="#" class="text-pink-600" aria-label="Learn more from our instagram"><i
+                                class="fab fa-instagram icon"></i></a>
                     </div>
                 </div>
             </div>
+
             <div class="flex items-center justify-center mt-12">
                 <ImageGallery :items="galleryItems" />
             </div>
         </section>
+
         <!-- Contact Section -->
         <section id="contact" class="py-20 px-4 bg-gradient-to-b from-pink-200 to-yellow-200">
-            <h2 class="text-5xl font-bold text-center mb-8">Contact Us</h2>
-            <p class="text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil consectetur odio
-                voluptas iure repellendus dolore doloribus nulla ut in ipsum nisi eius accusamus, dolorum, quisquam
-                temporibus eos velit, fuga esse.</p>
-            <div class="mt-12 flex flex-row content-container justify-between contacts-wrapper">
-                <div class="contact-container">
-                    <h2>Call us directly</h2>
-                    <a href="tel:+6494461709">+359888888888</a>
+            <h2 class="text-5xl font-bold text-center mb-8">Свържете се с нас</h2>
+            <p class="text-center max-w-3xl mx-auto">
+                Имате въпроси или искате да планираме заедно най-веселото парти? 💌
+                Свържете се с нас – с радост ще ви помогнем да организирате незабравимо изживяване за вашето дете!
+            </p>
+
+            <div
+                class="mt-12 flex flex-col md:flex-row content-container justify-between contacts-wrapper gap-8 md:gap-0">
+                <div class="contact-container text-center md:text-left">
+                    <h2 class="text-xl font-semibold mb-2">📞 Телефон</h2>
+                    <a href="tel:+359876190806" class="text-lg text-blue-700 hover:underline">+359 876 190 806</a>
                 </div>
-                <div class="contact-container">
-                    <h2>Email</h2>
-                    <a href="email:test@gmail.com">test@gmail.com</a>
+
+                <div class="contact-container text-center md:text-left">
+                    <h2 class="text-xl font-semibold mb-2">📧 Имейл</h2>
+                    <a href="mailto:veseliashko@gmail.com"
+                        class="text-lg text-blue-700 hover:underline">veseliashko@gmail.com</a>
                 </div>
-                <div class="text-2xl font-bold text-black">Veseliashko</div>
+
+                <div class="text-2xl font-bold text-black text-center md:text-left">
+                    🎈 Веселяшко
+                </div>
             </div>
         </section>
+
     </div>
 </template>
 
@@ -164,29 +162,82 @@ import { DotLottieVue } from '@lottiefiles/dotlottie-vue'
 const isLoading = ref(true)
 
 onBeforeMount(() => {
-  if (document.readyState === 'complete') {
-    // Страницата вече е напълно заредена
-    console.log('load (immediate)')
-    setTimeout(() => {
-      isLoading.value = false
-    }, 300)
-  } else {
-    // Изчакай load събитието
-    window.addEventListener('load', () => {
-      console.log('load (event)')
-      setTimeout(() => {
-        isLoading.value = false
-      }, 300)
-    })
-  }
+    if (document.readyState === 'complete') {
+        // Страницата вече е напълно заредена
+        console.log('load (immediate)')
+        setTimeout(() => {
+            isLoading.value = false
+        }, 300)
+    } else {
+        // Изчакай load събитието
+        window.addEventListener('load', () => {
+            console.log('load (event)')
+            setTimeout(() => {
+                isLoading.value = false
+            }, 300)
+        })
+    }
 })
+
+const packages = [
+    {
+        title: 'Пакет 1: “Мини Парти”',
+        price: '130 лв / за 10 деца (13 лв на дете)',
+        bgColor: 'bg-yellow-300',
+        sparkles: 5,
+        includes: [
+            '🎵 Детска дискотека (1 час) с аниматор',
+            '🎈 Фигурални балони за всяко дете',
+            '🎨 Рисунки на лице (до 2 модела на дете)',
+            '🕹️ Организирани игри',
+            '🎁 Малка наградка за всяко дете'
+        ],
+        extra: [
+            '1 аниматор',
+            'Времетраене: 1.5 часа'
+        ]
+    },
+    {
+        title: 'Пакет 2: “Средно Забавление”',
+        price: '160 лв / за 20 деца (8 лв на дете)',
+        bgColor: 'bg-pink-300',
+        sparkles: 20,
+        includes: [
+            '🎵 Детска дискотека (1.5 часа) с професионален аниматор',
+            '🎈 Фигурални балони (по избор)',
+            '🎨 Рисунки на лице с повече модели',
+            '🧩 Игри с награди',
+            '🥳 Специален “рожденик момент”'
+        ],
+        extra: [
+            '2 аниматори',
+            'Времетраене: 2 часа'
+        ]
+    },
+    {
+        title: 'Пакет 3: “Голямо Парти”',
+        price: '180 лв / за 30 деца (6 лв на дете)',
+        bgColor: 'bg-blue-300',
+        sparkles: 50,
+        includes: [
+            '🎵 Детска дискотека с DJ техника (2 часа)',
+            '🎈 Фигурални балони – по един за всяко дете',
+            '🎨 Персонализирани рисунки на лице',
+            '🏆 Мини турнири, танцови битки, награди',
+            '🎉 Голяма обща игра + награда',
+            '🎂 Специално шоу за рождения ден'
+        ],
+        extra: [
+            '3 аниматори',
+            'Времетраене: 2.5 – 3 часа'
+        ]
+    }
+]
+
 
 const galleryItems = [
     {
         src: "/images/viber_image_2025-05-31_10-02-04-276.jpg",
-    },
-    {
-        src: "/images/viber_image_2025-05-31_10-02-04-636.jpg",
     },
     {
         src: "/images/viber_image_2025-05-31_10-02-04-636.jpg",
@@ -229,17 +280,22 @@ body {
 }
 
 .loader {
-  border: 8px solid #f3f3f3;
-  border-top: 8px solid #9E7AFF; // Можеш да смениш цвета
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  animation: spin 1s linear infinite;
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #9E7AFF; // Можеш да смениш цвета
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .video-bg {
@@ -280,12 +336,12 @@ ul {
     gap: 30px;
 
     img {
-        width: 30%;
+        width: 40%;
         object-fit: cover;
     }
 
     .text-content {
-        width: 70%;
+        width: 60%;
         display: flex;
         flex-direction: column;
         gap: 20px;
