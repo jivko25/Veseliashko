@@ -142,8 +142,8 @@
 
                 <div class="contact-container text-center md:text-left">
                     <h2 class="text-xl font-semibold mb-2">📧 Имейл</h2>
-                    <a href="mailto:veseliashko@gmail.com"
-                        class="text-lg text-blue-700 hover:underline">veseliashko@gmail.com</a>
+                    <a href="mailto:mirelagancheva29@gmail.com"
+                        class="text-lg text-blue-700 hover:underline">mirelagancheva29@gmail.com</a>
                 </div>
 
                 <div class="text-2xl font-bold text-black text-center md:text-left">
