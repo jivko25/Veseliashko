@@ -17,8 +17,7 @@ export default defineNuxtConfig({
         { charset: 'utf-8' }
       ],
       link: [
-        // { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css' },
-        // { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Baloo+2&display=swap' }
+        { rel: 'canonical', href: 'https://veseliashko.com/' }
       ],
       script: [
         { src: 'https://cdn.tailwindcss.com', defer: true }
