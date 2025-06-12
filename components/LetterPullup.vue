@@ -1,7 +1,7 @@
 <template>
     <div class="flex justify-center">
         <div v-for="(letter, index) in letters" :key="letter">
-            <Motion as="h1" :initial="pullupVariant.initial" :animate="pullupVariant.animate" :transition="{
+            <Motion as="h2" :initial="pullupVariant.initial" :animate="pullupVariant.animate" :transition="{
                 delay: index * (props.delay ? props.delay : 0.05),
             }" :class="cn(
             'font-display text-center text-4xl font-bold tracking-[-0.02em] text-black drop-shadow-sm md:text-4xl md:leading-[5rem]',
