@@ -31,5 +31,5 @@ export default defineNuxtConfig({
     dir: 'public',
   },
 
-  modules: ['@nuxt/icon', '@nuxt/image', '@nuxt/scripts']
+  modules: ['@nuxt/icon', '@nuxt/image', '@nuxt/scripts', '@nuxtjs/robots', '@nuxtjs/sitemap']
 })
