@@ -25,7 +25,7 @@
                 <!-- <video autoplay muted loop class="video-bg" width="1920" height="1080">
                     <source src="/videos/6299128-uhd_3840_2160_25fps.mp4" type="video/mp4" class="video-bg">
                 </video> -->
-                <img src="/images/viber_image_2025-05-31_10-02-05-268.jpg" alt="About Us" class="video-bg">
+                <img src="/images/viber_image_2025-05-31_10-02-05-268.jpg" alt="About Us" class="video-bg" width="1600" height="900">
             </div>
         </section>
         <!-- Services Overview Section -->
@@ -71,7 +71,7 @@
             <LetterPullup words="За нас" :delay="0.1" class="text-black mb-12 section-header" />
             <div class="about-us-content">
                 <div class="img-wrapper">
-                    <img src="/images/about-us.jpg" alt="About Us" class="responsive-img">
+                    <img src="/images/about-us.jpg" alt="About Us" class="responsive-img" width="1080" height="1080">
                 </div>
                 <div class="text-content">
                     <SparklesText :colors="{ first: '#9E7AFF', second: '#FE8BBB' }" :sparkles-count="20"
