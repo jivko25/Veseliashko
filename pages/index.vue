@@ -74,8 +74,8 @@
                         class="w-100 flex flex-row justify-center">
                         <h3 class="text-center w-100 subtitle">Добре дошли в Парти агенция „Веселячко“! 🎉</h3>
                     </SparklesText>
-                    <h5 class="additional-title w-100 text-center">Тук всяко дете е звездата на своето вълшебно парти!
-                        🎈</h5>
+                    <h4 class="additional-title w-100 text-center">Тук всяко дете е звездата на своето вълшебно парти!
+                        🎈</h4>
 
                     <p>
                         Здравейте! Казвам се Мирела и вече над 10 години работя с деца – с обич, търпение и много
@@ -109,14 +109,14 @@
                     <p class="mt-4 font-semibold text-pink-600">💛 Доверете ни се – заедно ще създадем празник, който
                         децата ще помнят дълго.</p>
 
-                    <div class="flex flex-row gap-2 mx-auto mt-6">
+                    <!-- <div class="flex flex-row gap-2 mx-auto mt-6">
                         <a href="#" class="text-blue-500" aria-label="Learn more from our facebook"><i
                                 class="fab fa-facebook-f icon"></i></a>
                         <a href="#" class="text-blue-400" aria-label="Learn more from our twitter"><i
                                 class="fab fa-twitter icon"></i></a>
                         <a href="#" class="text-pink-600" aria-label="Learn more from our instagram"><i
                                 class="fab fa-instagram icon"></i></a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
 
