@@ -8,11 +8,13 @@
         <!-- Call to Action Section -->
         <section class="relative h-screen bg-cover bg-center hero">
             <div class="absolute inset-0 bg-black opacity-50"></div>
-            <div v-if="!isLoading" class="relative flex flex-col items-center justify-center h-full text-white text-center p-4">
-                <SparklesText text="Незабравимо парти за всяко дете!" :colors="{ first: '#9E7AFF', second: '#FE8BBB' }"
-                    :sparkles-count="10" class="my-8" />
-                <h1 class="mb-4 text-lg z-2">Организираме празненства, пълни с музика, балони, игри и усмивки – всичко,
-                    което прави рождения ден специален!</h1>
+            <div v-if="!isLoading"
+                class="relative flex flex-col items-center justify-center h-full text-white text-center p-4">
+                <SparklesText :colors="{ first: '#9E7AFF', second: '#FE8BBB' }" :sparkles-count="10" class="my-8">
+                    <h1>Незабравимо парти за всяко дете!</h1>
+                </SparklesText>
+                <p class="mb-4 text-lg z-2">Организираме празненства, пълни с музика, балони, игри и усмивки – всичко,
+                    което прави рождения ден специален!</p>
                 <a href="#contact">
                     <RainbowButton>
                         <p class="text-neutral-950">
@@ -29,8 +31,10 @@
         <!-- Services Overview Section -->
         <section id="services" class="py-20 px-4 bg-gradient-to-b from-yellow-200 to-pink-200">
             <LetterPullup words="Нашите услуги" :delay="0.1" class="text-black section-header" />
-            <p class="text-center mb-8 text-lg">     Изберете от нашите внимателно подбрани парти пакети, създадени така, че всяко дете да се чувства специално! 🎉<br>
-                От малки празненства до големи тържества – ние идваме на място при вас, за да се погрижим за усмивките, игрите и незабравимите спомени!
+            <p class="text-center mb-8 text-lg"> Изберете от нашите внимателно подбрани парти пакети, създадени така, че
+                всяко дете да се чувства специално! 🎉<br>
+                От малки празненства до големи тържества – ние идваме на място при вас, за да се погрижим за усмивките,
+                игрите и незабравимите спомени!
             </p>
             <div class="flex flex-col sm:flex-row justify-around cards-wrapper">
                 <SparklesText v-for="(pack, index) in packages" :key="index"
@@ -446,17 +450,17 @@ ul {
 }
 
 .img-wrapper {
-  width: 100%;
-  max-width: 560px;
-  aspect-ratio: 140 / 169;
+    width: 100%;
+    max-width: 560px;
+    aspect-ratio: 140 / 169;
     overflow: hidden;
 }
 
 .responsive-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 // .icon {
