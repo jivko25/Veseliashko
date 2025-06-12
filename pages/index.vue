@@ -11,8 +11,8 @@
             <div v-if="!isLoading" class="relative flex flex-col items-center justify-center h-full text-white text-center p-4">
                 <SparklesText text="Незабравимо парти за всяко дете!" :colors="{ first: '#9E7AFF', second: '#FE8BBB' }"
                     :sparkles-count="10" class="my-8" />
-                <p class="mb-4 text-lg z-2">Организираме празненства, пълни с музика, балони, игри и усмивки – всичко,
-                    което прави рождения ден специален!</p>
+                <h1 class="mb-4 text-lg z-2">Организираме празненства, пълни с музика, балони, игри и усмивки – всичко,
+                    което прави рождения ден специален!</h1>
                 <a href="#contact">
                     <RainbowButton>
                         <p class="text-neutral-950">
@@ -72,7 +72,7 @@
                 <div class="text-content">
                     <SparklesText :colors="{ first: '#9E7AFF', second: '#FE8BBB' }" :sparkles-count="20"
                         class="w-100 flex flex-row justify-center">
-                        <h4 class="text-center w-100 subtitle">Добре дошли в Парти агенция „Веселячко“! 🎉</h4>
+                        <h3 class="text-center w-100 subtitle">Добре дошли в Парти агенция „Веселячко“! 🎉</h3>
                     </SparklesText>
                     <h5 class="additional-title w-100 text-center">Тук всяко дете е звездата на своето вълшебно парти!
                         🎈</h5>
