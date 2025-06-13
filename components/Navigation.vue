@@ -3,7 +3,7 @@
         'fixed top-0 left-0 w-full z-50 px-8 py-4 flex justify-between items-center transition-all duration-300',
         (isScrolled || isOpen) ? 'bg-pink-200/60' : ''
     ]">
-        <div class="text-2xl font-bold text-white">🎈 Веселяшко</div>
+        <div class="text-2xl font-bold text-white">🎈 Веселячко</div>
 
         <!-- Hamburger Button (visible on mobile only) -->
         <button @click="isOpen = !isOpen" class="sm:hidden flex flex-col justify-center items-center space-y-1">

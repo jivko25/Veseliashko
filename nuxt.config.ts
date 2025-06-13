@@ -10,10 +10,10 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: "Веселяшко",
+      title: "Веселячко",
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'description', content: 'Веселяшко носи празника при вас – вкъщи, в двора или избрана локация. Игри, балони, музика и усмивки за един незабравим детски рожден ден!' },
+        { name: 'description', content: 'Веселячко носи празника при вас – вкъщи, в двора или избрана локация. Игри, балони, музика и усмивки за един незабравим детски рожден ден! Намираме се в Бургас.' },
         { charset: 'utf-8' }
       ],
       link: [
